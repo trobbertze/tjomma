@@ -16,7 +16,7 @@ Meteor.startup(function () {
                     color: '#677580',
                     backgroundColor: "#ffffff",
                     selectedBackgroundColor: "#c3dfef",
-                    action: new TestView({
+                    action: new BaseView({
                       content: "Home View",
                       backgroundColor: "blue"
                     })
@@ -27,7 +27,7 @@ Meteor.startup(function () {
                     color: '#677580',
                     backgroundColor: "#ffffff",
                     selectedBackgroundColor: "#c3dfef",
-                    action: new TestView({
+                    action: new BaseView({
                       content: "My Profile",
                       backgroundColor: "red"
                     })
@@ -38,7 +38,7 @@ Meteor.startup(function () {
                     color: '#677580',
                     backgroundColor: "#ffffff",
                     selectedBackgroundColor: "#c3dfef",
-                    action: new TestView({
+                    action: new BaseView({
                       content: "Tournaments",
                       backgroundColor: "green"
                     })
@@ -49,7 +49,7 @@ Meteor.startup(function () {
                     color: '#677580',
                     backgroundColor: "#ffffff",
                     selectedBackgroundColor: "#c3dfef",
-                    action: new TestView({
+                    action: new BaseView({
                       content: "History",
                       backgroundColor: "yellow"
                     })
