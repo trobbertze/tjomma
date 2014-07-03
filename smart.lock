@@ -5,11 +5,17 @@
       "sideMenu": {
         "path": "../packages/sideMenu"
       },
+      "testView": {
+        "path": "../packages/testView"
+      },
       "font-awesome": {}
     },
     "packages": {
       "sideMenu": {
         "path": "../packages/sideMenu"
+      },
+      "testView": {
+        "path": "../packages/testView"
       },
       "font-awesome": {
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",

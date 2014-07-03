@@ -2,6 +2,9 @@
 	"famous": {
 		"git": "https://github.com/Famous/famous.git"
 	},
+	"famous.views": {
+		"git": "https://github.com/Famous/views.git"
+	},
 	"famous.polyfills": {
 		"git": "https://github.com/Famous/polyfills.git"
 	},

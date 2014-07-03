@@ -3,6 +3,9 @@
     "sideMenu": {
       "path": "/Users/theorobbertze/Workspace/packages/sideMenu"
     },
+    "testView": {
+      "path": "/Users/theorobbertze/Workspace/packages/testView"
+    },
     "font-awesome": {}
   }
 }
