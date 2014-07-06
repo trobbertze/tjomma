@@ -1,7 +1,5 @@
-Meteor.startup(function () {
-    var Engine = require('famous/core/Engine');
-
-    var sideMenu = new SideMenu({
+startApp = function() {
+    return new SideMenu({
         header: {
             title: "Tjomma",
             color: '#677580',
@@ -27,10 +25,7 @@ Meteor.startup(function () {
                     color: '#677580',
                     backgroundColor: "#ffffff",
                     selectedBackgroundColor: "#c3dfef",
-                    action: new BaseView({
-                      content: "My Profile",
-                      backgroundColor: "red"
-                    })
+                    action: new ProfileView()
                 },
                 {
                     title: 'Tournaments',
@@ -57,11 +52,4 @@ Meteor.startup(function () {
             ]
         }
     });
-
-    var mainCtx = Engine.createContext();
-    mainCtx.setPerspective(1000);
-
-
-    mainCtx.add(sideMenu)
-
-})
+};

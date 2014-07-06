@@ -1,7 +1,16 @@
 {
   "packages": {
+    "events": {
+      "path": "/Users/theorobbertze/Workspace/packages/events"
+    },
     "sideMenu": {
       "path": "/Users/theorobbertze/Workspace/packages/sideMenu"
+    },
+    "progressIndicator": {
+      "path": "/Users/theorobbertze/Workspace/packages/progressIndicator"
+    },
+    "famousLogin": {
+      "path": "/Users/theorobbertze/Workspace/packages/famousLogin"
     },
     "font-awesome": {}
   }

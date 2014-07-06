@@ -2,14 +2,32 @@
   "meteor": {},
   "dependencies": {
     "basePackages": {
+      "events": {
+        "path": "../packages/events"
+      },
       "sideMenu": {
         "path": "../packages/sideMenu"
+      },
+      "progressIndicator": {
+        "path": "../packages/progressIndicator"
+      },
+      "famousLogin": {
+        "path": "../packages/famousLogin"
       },
       "font-awesome": {}
     },
     "packages": {
+      "events": {
+        "path": "../packages/events"
+      },
       "sideMenu": {
         "path": "../packages/sideMenu"
+      },
+      "progressIndicator": {
+        "path": "../packages/progressIndicator"
+      },
+      "famousLogin": {
+        "path": "../packages/famousLogin"
       },
       "font-awesome": {
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",
