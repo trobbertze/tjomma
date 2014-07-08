@@ -11,6 +11,9 @@
       "progressIndicator": {
         "path": "../packages/progressIndicator"
       },
+      "animatedAlert": {
+        "path": "../packages/animatedAlert"
+      },
       "famousLogin": {
         "path": "../packages/famousLogin"
       },
@@ -26,6 +29,9 @@
       "progressIndicator": {
         "path": "../packages/progressIndicator"
       },
+      "animatedAlert": {
+        "path": "../packages/animatedAlert"
+      },
       "famousLogin": {
         "path": "../packages/famousLogin"
       },
@@ -36,8 +42,8 @@
       },
       "famono": {
         "git": "https://github.com/raix/Meteor-famono.git",
-        "tag": "v0.3.11",
-        "commit": "d7c6dbc471ad034e2dc0f7d557838c474604cee9"
+        "tag": "v0.3.12",
+        "commit": "2cb940bbcf8b72bb65819b813387542156e1bfea"
       },
       "baseView": {
         "path": "../packages/baseView"
