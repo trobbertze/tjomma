@@ -4,7 +4,6 @@ ProfileView = function(options){
   var View         = require('famous/core/View');
   var Surface      = require('famous/core/Surface');
   var Utility      = require('famous/utilities/Utility');
-  require('famous/inputs/FastClick');
 
   // ---------------------------------------------------------------------------
   function _ProfileView(options) {

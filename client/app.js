@@ -33,7 +33,7 @@ startApp = function() {
                     color: '#677580',
                     backgroundColor: "#ffffff",
                     selectedBackgroundColor: "#c3dfef",
-                    action: new BaseView({
+                    action: new Tournaments({
                       content: "Tournaments",
                       backgroundColor: "green"
                     })

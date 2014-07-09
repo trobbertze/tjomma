@@ -17,6 +17,9 @@
       "famousLogin": {
         "path": "../packages/famousLogin"
       },
+      "cursorScrollView": {
+        "path": "../packages/cursorScrollView"
+      },
       "font-awesome": {}
     },
     "packages": {
@@ -34,6 +37,9 @@
       },
       "famousLogin": {
         "path": "../packages/famousLogin"
+      },
+      "cursorScrollView": {
+        "path": "../packages/cursorScrollView"
       },
       "font-awesome": {
         "git": "https://github.com/nate-strauser/meteor-font-awesome.git",

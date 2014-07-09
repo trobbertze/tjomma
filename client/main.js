@@ -4,7 +4,6 @@ Meteor.startup(function () {
   var Transform   = require('famous/core/Transform');
   var Utility     = require('famous/utilities/Utility');
   var Easing      = require('famous/transitions/Easing');
-  require('famous/inputs/FastClick');
 
   var mainCtx = Engine.createContext();
   mainCtx.setPerspective(1000);
