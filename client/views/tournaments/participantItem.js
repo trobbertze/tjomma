@@ -1,17 +1,24 @@
-ListItem = function(options) {
+ParticipantItem = function(options) {
 
   var View         = require('famous/core/View');
   var Surface      = require('famous/core/Surface');
 
   // ---------------------------------------------------------------------------
-  function _ListItem(options) {
+  function _ParticipantItem(options) {
     View.apply(this, arguments);
 
     this.document = options.document;
 
+    var model = new TournamentParticipantModel(
+      null,
+      {
+        participantId: this.document.participantId
+      }
+    );
+
     var surface = new Surface({
       size: [undefined, 100],
-      content: "<div class='itemData'>" + this.document.name + "</div>",
+      content: "<div class='itemData'>" + model.get("participantName") + "</div>",
       properties: {
       }
     });
@@ -22,9 +29,9 @@ ListItem = function(options) {
 
   }
   // ---------------------------------------------------------------------------
-  _ListItem.prototype = Object.create(View.prototype);
-  _ListItem.prototype.constructor = _ListItem;
+  _ParticipantItem.prototype = Object.create(View.prototype);
+  _ParticipantItem.prototype.constructor = _ParticipantItem;
 
   // ---------------------------------------------------------------------------
-  return new _ListItem(options);
+  return new _ParticipantItem(options);
 };

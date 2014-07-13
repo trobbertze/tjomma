@@ -2,16 +2,16 @@ Tournaments = function(options) {
 
   var View         = require('famous/core/View');
   var Surface      = require('famous/core/Surface');
-  var Lightbox     = require('famous.views/Lightbox');
   var Transform    = require('famous/core/Transform');
   var Easing       = require('famous/transitions/Easing');
   var Flipper      = require("famous/views/Flipper");
+  require('famous/inputs/FastClick');
 
   // ---------------------------------------------------------------------------
   function _Tournaments(options) {
     View.apply(this, arguments);
 
-    this.lightbox = new Lightbox({
+    this.lightbox = new IntelliLightbox({
       inOpacity: 1,
       outOpacity: 0,
       inTransform: Transform.translate(0, -320, 0),
@@ -26,6 +26,11 @@ Tournaments = function(options) {
       this.onAddTournamentComplete.bind(this)
     );
 
+    this.addForm.on(
+      "backButtonClicked",
+      this.onAddTournamentComplete.bind(this)
+    );
+
     this.flipper = new Flipper();
 
     this.editForm = new TournamentEdit();
@@ -35,19 +40,14 @@ Tournaments = function(options) {
     this.flipper.setFront(list);
     this.flipper.setBack(this.editForm);
 
-
-    var flip = function(toggle){
-      var angle = toggle ? 0 : Math.PI;
-      this.flipper.setAngle(angle, {curve : 'easeOutBounce', duration : 500});
-    };
-
     this.editForm.on("clickEdit", function(){
-      flip(true);
+      //flip(true);
+      this.flipper.flip();
     }.bind(this));
 
     list.on("clickList", function(value) {
       this.editForm.setContent(value);
-      flip(false);
+      this.flipper.flip();
     }.bind(this));
 
     this.lightbox.show(this.flipper);
@@ -56,10 +56,18 @@ Tournaments = function(options) {
   }
   // ---------------------------------------------------------------------------
   _Tournaments.prototype = Object.create(View.prototype);
-  _Tournaments.prototype.constructor = Tournaments;
+  _Tournaments.prototype.constructor = _Tournaments;
   // ---------------------------------------------------------------------------
   _Tournaments.prototype.addItem = function() {
+    // If tournament Edit is showing
+    if (this.lightbox.currentlyShowing &&
+      this.lightbox.currentlyShowing === "Flipper" &&
+      this.flipper.flipped === true){
+          this.editForm.showAddParticipant();
+    }
+    else {
       this.lightbox.show(this.addForm);
+    }
   };
   // ---------------------------------------------------------------------------
   _Tournaments.prototype.onAddTournamentComplete = function() {

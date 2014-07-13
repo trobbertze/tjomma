@@ -3,6 +3,7 @@
 	float: left;
 	height: 100px;
 	width: 100%;
+  font-size: 1.5em;
 	line-height: 100px;
 	padding: 0 20px;
   border-bottom: 1px solid #e1e8ee;
@@ -19,4 +20,43 @@
   font-size: 6em !important;
   text-align: center;
   padding-top: 0.7em;
+}
+
+
+.addTournament.backButton{
+  font-family: "FontAwesome";
+  font-size: 6em !important;
+  text-align: center;
+  padding-top: 1em;
+}
+
+.editTournament {
+  color: #677580 !important;
+  font-size: 1em  !important;
+  font-size: 1.5em !important;
+}
+
+.editTournament.name {
+  color: #fff !important;
+  height: 100px  !important;
+  width: 100% !important;
+  font-size: 1.5em;
+  line-height: 100px;
+  padding: 0 20px;
+  background-color: #8999a7;
+}
+
+.editTournament.addButton{
+  font-family: "FontAwesome";
+  font-size: 3em !important;
+  text-align: center;
+  padding-top: 0.4em;
+  padding-left: 0.3em;
+}
+
+
+.editTournament.addParticipant.container {
+  background-color: #fff;
+  border-bottom: 1px solid #677580;
+  font-size: 1.2em !important;
 }

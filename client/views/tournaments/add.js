@@ -8,6 +8,8 @@ TournamentAdd = function(options) {
   var InputSurface = require('famous/surfaces/InputSurface');
   var Utility      = require('famous/utilities/Utility');
 
+  TournamentAdd.prototype.constructor = TournamentAdd;
+
   // ---------------------------------------------------------------------------
   function _TournamentAdd(options) {
     View.apply(this, arguments);
@@ -37,9 +39,21 @@ TournamentAdd = function(options) {
 
     addButton.on("click", this.onAddButtonClick.bind(this));
 
+    var backButton = new Surface({
+      classes: [
+        "addTournament",
+        "backButton"
+      ],
+      content: "&#xf0a8;",
+      size: [240, 80]
+    });
+
+    backButton.on("click", this.onBackButtonClick.bind(this));
+
     form.sequenceFrom([
       this.name,
-      addButton
+      addButton,
+      backButton
       ]);
 
     var modifier = new StateModifier({
@@ -58,7 +72,7 @@ TournamentAdd = function(options) {
   }
   // ---------------------------------------------------------------------------
   _TournamentAdd.prototype = Object.create(View.prototype);
-  _TournamentAdd.prototype.constructor = TournamentAdd;
+  _TournamentAdd.prototype.constructor = _TournamentAdd;
   // ---------------------------------------------------------------------------
   _TournamentAdd.prototype.onAddButtonClick = function(evt) {
     this.progress.show();
@@ -68,6 +82,10 @@ TournamentAdd = function(options) {
       },
       this.addTournamentComplete.bind(this)
       );
+  };
+  // ---------------------------------------------------------------------------
+  _TournamentAdd.prototype.onBackButtonClick = function(evt) {
+    this._eventOutput.emit('backButtonClicked');
   };
   // ---------------------------------------------------------------------------
   _TournamentAdd.prototype.addTournamentComplete = function(err, id){
