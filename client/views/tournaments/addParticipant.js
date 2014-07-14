@@ -17,8 +17,6 @@ AddParticipant = function(options) {
   function _AddParticipant(options) {
     View.apply(this, arguments);
 
-    //this.add(new Surface({content: "Jou ma se poes"}));
-
     var addParticipantLayout = new SequentialLayout({
       direction: Utility.Direction.X,
     });

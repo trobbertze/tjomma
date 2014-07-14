@@ -80,6 +80,17 @@ TournamentEdit = function(options) {
       this.model.getParticipantsCursor(),
       ParticipantItem
     );
+
+    this.scrollview.each(function(item){
+      item.on("showButtons", this.clearHideParticipantItemButtons.bind(this, item));
+    }, this);
+  };
+  // ---------------------------------------------------------------------------
+  _TournamentEdit.prototype.clearHideParticipantItemButtons = function(item) {
+    // The buttons for "item" should not be hidden
+    this.scrollview.each(function(item){
+      item.hideButtons();
+    }, this);
   };
   // ---------------------------------------------------------------------------
   _TournamentEdit.prototype.addParticipantClick = function(participantName) {
