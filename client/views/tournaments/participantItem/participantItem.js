@@ -12,11 +12,9 @@ ParticipantItem = function(options) {
 
     this.document = options.document;
 
-    var model = new TournamentParticipantModel(
+    this.model = new TournamentParticipantModel(
       null,
-      {
-        participantId: this.document.participantId
-      }
+      this.document
     );
 
     var container = new ContainerSurface({
@@ -25,7 +23,7 @@ ParticipantItem = function(options) {
 
     var surface = new Surface({
       size: [undefined, 100],
-      content: "<div class='itemData'>" + model.get("participantName") + "</div>",
+      content: "<div class='itemData'>" + this.model.get("participantName") + "</div>",
       properties: {
       }
     });
@@ -35,6 +33,9 @@ ParticipantItem = function(options) {
     surface.pipe(this._eventOutput);
 
     this.buttons = new ParticipantItemButtons();
+
+    this.buttons.on("remove", this.remove.bind(this));
+    this.buttons.on("challenge", this.challenge.bind(this));
 
     container.add(surface);
 
@@ -58,6 +59,14 @@ ParticipantItem = function(options) {
   // ---------------------------------------------------------------------------
   _ParticipantItem.prototype.hideButtons = function() {
     this.buttons.hide();
+  };
+  // ---------------------------------------------------------------------------
+  _ParticipantItem.prototype.challenge = function() {
+    console.log("challenge");
+  };
+  // ---------------------------------------------------------------------------
+  _ParticipantItem.prototype.remove = function() {
+    this.model.remove();
   };
   return new _ParticipantItem(options);
 };

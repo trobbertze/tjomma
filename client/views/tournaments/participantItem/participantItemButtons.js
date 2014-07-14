@@ -25,19 +25,23 @@ ParticipantItemButtons = function(options) {
       content: "&#xf05d;",
     });
 
-    var deleteButton = new Surface({
+    challengeButton.on("click", this.challenge.bind(this));
+
+    var removeButton = new Surface({
       size: [40, 60],
       classes: [
         "editTournament",
         "participantItem",
-        "deleteButton"
+        "removeButton"
       ],
       content: "&#xf056;"
     });
 
+    removeButton.on("click", this.remove.bind(this));
+
     buttonLayout.sequenceFrom([
       challengeButton,
-      deleteButton
+      removeButton
     ]);
 
     this.buttonLayoutModifier = new StateModifier({
@@ -48,7 +52,6 @@ ParticipantItemButtons = function(options) {
 
     this.add(this.buttonLayoutModifier)
     .add(buttonLayout);
-    //this.add(deleteButton);
   }
   // ---------------------------------------------------------------------------
   _ParticipantItemButtons.prototype = Object.create(View.prototype);
@@ -76,6 +79,16 @@ ParticipantItemButtons = function(options) {
         dampingRatio: 0.3
       }
     );
+  };
+  // ---------------------------------------------------------------------------
+  _ParticipantItemButtons.prototype.challenge = function() {
+    this.hide();
+    this._eventOutput.emit('challenge');
+  };
+  // ---------------------------------------------------------------------------
+  _ParticipantItemButtons.prototype.remove = function() {
+    this.hide();
+    this._eventOutput.emit('remove');
   };
   return new _ParticipantItemButtons(options);
 };
