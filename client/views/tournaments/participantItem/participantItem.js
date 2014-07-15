@@ -62,7 +62,10 @@ ParticipantItem = function(options) {
   };
   // ---------------------------------------------------------------------------
   _ParticipantItem.prototype.challenge = function() {
-    console.log("challenge");
+    this.buttons.hide();
+    this.model.challenge({
+      fromUserId: Meteor.userId()
+    });
   };
   // ---------------------------------------------------------------------------
   _ParticipantItem.prototype.remove = function() {

@@ -20,23 +20,20 @@ startApp = function() {
                     })
                 },
                 {
-                    title: 'My profile',
-                    icon: '&#xf007;',
-                    color: '#677580',
-                    backgroundColor: "#ffffff",
-                    selectedBackgroundColor: "#c3dfef",
-                    action: new ProfileView()
-                },
-                {
                     title: 'Tournaments',
                     icon: '&#xf1e1;',
                     color: '#677580',
                     backgroundColor: "#ffffff",
                     selectedBackgroundColor: "#c3dfef",
-                    action: new Tournaments({
-                      content: "Tournaments",
-                      backgroundColor: "green"
-                    })
+                    action: new Tournaments()
+                },
+                {
+                    title: 'Notifications',
+                    icon: '&#xf0e0;',
+                    color: '#677580',
+                    backgroundColor: "#ffffff",
+                    selectedBackgroundColor: "#c3dfef",
+                    action: new Notifications()
                 },
                 {
                     title: 'History',
@@ -48,6 +45,14 @@ startApp = function() {
                       content: "History",
                       backgroundColor: "yellow"
                     })
+                },
+                {
+                    title: 'My profile',
+                    icon: '&#xf007;',
+                    color: '#677580',
+                    backgroundColor: "#ffffff",
+                    selectedBackgroundColor: "#c3dfef",
+                    action: new ProfileView()
                 }
             ]
         }
