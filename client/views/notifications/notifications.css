@@ -1,0 +1,22 @@
+.notification.itemData .challenge {
+  font-size: 0.8em !important;
+  line-height: 1em;
+}
+
+.notification.itemData .challenge div {
+  margin-top: 0.5em;
+}
+
+.notification.challenge.acceptButton{
+  font-family: "FontAwesome";
+  text-align: center;
+  font-size: 1em !important;
+  padding-top: 1em;
+}
+
+.notification.challenge.rejectButton{
+  font-family: "FontAwesome";
+  text-align: center;
+  font-size: 1em !important;
+  padding-top: 1em;
+}

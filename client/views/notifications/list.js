@@ -16,7 +16,9 @@ NotificationsList = function(options) {
 
     this.scrollview = new CursorScrollView({
       cursor: NotificationsCollection.find(),
-      itemPrototype: NotificationListItem
+      itemPrototype: {
+        challenge: ChallengeListItem
+      }
     });
 
     this.scrollview.sync = new GenericSync(['mouse', 'touch', 'scroll'], {direction: 1});
