@@ -48,7 +48,7 @@ TournamentEdit = function(options) {
     container.add(this.scrollview);
 
     this.add(new StateModifier({
-      transform: Transform.translate(0, 100, 0)
+      transform: Transform.translate(0, 50, 0)
     })).add(container);
 
     this.addParticipantView = new AddParticipant();

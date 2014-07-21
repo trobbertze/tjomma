@@ -10,7 +10,7 @@ ListItem = function(options) {
     this.document = options.document;
 
     var surface = new Surface({
-      size: [undefined, 100],
+      size: [undefined, 50],
       content: "<div class='itemData'>" + this.document.name + "</div>",
       properties: {
       }

@@ -18,11 +18,11 @@ ParticipantItem = function(options) {
     );
 
     var container = new ContainerSurface({
-      size: [undefined, 100]
+      size: [undefined, 50]
     });
 
     var surface = new Surface({
-      size: [undefined, 100],
+      size: [undefined, 50],
       content: "<div class='itemData'>" + this.model.get("participantName") + "</div>",
       properties: {
       }
