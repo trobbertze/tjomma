@@ -3,6 +3,9 @@
     "events": {
       "path": "/Users/theorobbertze/Workspace/packages/events"
     },
+    "horizontalMenu": {
+      "path": "/Users/theorobbertze/Workspace/packages/horizontalMenu"
+    },
     "sideMenu": {
       "path": "/Users/theorobbertze/Workspace/packages/sideMenu"
     },

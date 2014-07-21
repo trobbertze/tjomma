@@ -5,6 +5,9 @@
       "events": {
         "path": "../packages/events"
       },
+      "horizontalMenu": {
+        "path": "../packages/horizontalMenu"
+      },
       "sideMenu": {
         "path": "../packages/sideMenu"
       },
@@ -25,6 +28,9 @@
     "packages": {
       "events": {
         "path": "../packages/events"
+      },
+      "horizontalMenu": {
+        "path": "../packages/horizontalMenu"
       },
       "sideMenu": {
         "path": "../packages/sideMenu"
@@ -48,8 +54,8 @@
       },
       "famono": {
         "git": "https://github.com/raix/Meteor-famono.git",
-        "tag": "v0.3.12",
-        "commit": "2cb940bbcf8b72bb65819b813387542156e1bfea"
+        "tag": "v0.3.16",
+        "commit": "7642dde4587c7d5dea788b866265c57d99da2d32"
       },
       "baseView": {
         "path": "../packages/baseView"

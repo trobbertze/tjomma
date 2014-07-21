@@ -2,6 +2,8 @@ TournamentList = function(options) {
 
   var View         = require('famous/core/View');
   var Surface      = require('famous/core/Surface');
+  var StateModifier = require('famous/modifiers/StateModifier');
+  var Transform    = require('famous/core/Transform');
   var GenericSync  = require('famous/inputs/GenericSync');
 	var MouseSync    = require('famous/inputs/MouseSync');
   var ContainerSurface = require('famous/surfaces/ContainerSurface');
@@ -14,6 +16,8 @@ TournamentList = function(options) {
   function _TournamentList(options) {
     View.apply(this, arguments);
 
+    var container = new ContainerSurface();
+
     this.scrollview = new CursorScrollView({
       cursor: TournamentsCollection.find(),
       itemPrototype: ListItem
@@ -24,8 +28,6 @@ TournamentList = function(options) {
 		this.scrollview.sync.pipe(this.scrollview._eventInput);
 
     this.scrollview.on("clickItem", this.onClick.bind(this));
-
-    var container = new ContainerSurface();
 
     container.add(this.scrollview);
 

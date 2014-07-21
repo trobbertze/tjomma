@@ -33,7 +33,7 @@ Tournaments = function(options) {
 
     this.flipper = new Flipper();
 
-    this.editForm = new TournamentEdit();
+    this.editForm = new TournamentDetail();
 
     var list = new TournamentList();
 
